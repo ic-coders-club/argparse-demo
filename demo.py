@@ -13,7 +13,7 @@ def parse_args(parse_inputs=None):
             )
     parser.add_argument('--dir', default=os.getcwd(), 
             help='This option takes a default. Also, no type is specified, so it will be stored as ')  
-    parser.add_argument('-n','--number',   action='store', type=int,required=True ,help='standard err directory, required by qstat')
+#    parser.add_argument('-n','--number',   action='store', type=int,required=True ,help='standard err directory, required by qstat')
     parser.add_argument('--under-score',  action='store',  help='This will be stored as under_score' )
     parser.add_argument('--batch-queue',  help='here is an argument that only takes certain choices',  
             default='hepshort.q',
@@ -31,8 +31,20 @@ if __name__ == '__main__':
     args_dict=vars(args)
     pp.pprint(args_dict)#This is pretty printer, also a nice function
     print('''
+To see all the options run
+./demo.py -h
+    
+Now do:
+./demo.py @some_args.txt
+
+Next do:
+uncomment the argument that says '-n','--number' 
+This will introduce a required argument that you have to give
+
+Finally:
 I strongly recommend reading the full documentation, since this demo only shows a limmited number of features. 
-You can for example automatically have files opened that are parsed using argparse, or use groupings.''')
+You can for example automatically have files opened that are parsed using argparse, or use groupings.
+''')
     
 
 
