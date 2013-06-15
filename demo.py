@@ -24,18 +24,17 @@ def parse_args(parse_inputs=None):
 
 
 if __name__ == '__main__':
-    args=parse_args()
-    print('\nparse_args returns a namespace, \n')
-    pp.pprint(args)
-    print('\nbut you can turn it into a dictionary using \'vars()\':\n')
-    args_dict=vars(args)
-    pp.pprint(args_dict)#This is pretty printer, also a nice function
     print('''
+===========================================================================================================
 To see all the options run
 ./demo.py -h
+
+Now do:
+uncomment the print lines below and run again
     
 Now do:
 ./demo.py @some_args.txt
+look at the differences in 
 
 Next do:
 uncomment the argument that says '-n','--number' 
@@ -44,7 +43,14 @@ This will introduce a required argument that you have to give
 Finally:
 I strongly recommend reading the full documentation, since this demo only shows a limmited number of features. 
 You can for example automatically have files opened that are parsed using argparse, or use groupings.
+===========================================================================================================
 ''')
+    args=parse_args()
+#    print('\nparse_args returns a namespace, \n')
+#    pp.pprint(args)
+#    print('\nbut you can turn it into a dictionary using \'vars()\':\n')
+#    args_dict=vars(args)
+#    pp.pprint(args_dict)#This is pretty printer, also a nice function
     
 
 
